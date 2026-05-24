@@ -18,7 +18,7 @@ export default function Voyage() {
         {/* Main Feature Image */}
         <div className="w-full max-w-4xl mx-auto mb-6">
           <img
-            src="/assets/voyage.svg"
+            src="/assets/voyage.webp"
             alt="Maritime Professionals on site"
             className="w-full h-auto md:h-112.5 object-cover rounded-2xl grayscale shadow-sm"
           />

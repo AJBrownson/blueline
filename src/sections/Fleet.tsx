@@ -2,7 +2,7 @@ export default function Fleet() {
   const fleetData = [
     {
       id: 1,
-      image: "/assets/fleet1.svg",
+      image: "/assets/fleet1.webp",
       name: "Crude Oceanic",
       dwt: "115,000 MT",
       cargo: "Crude Oil",
@@ -10,7 +10,7 @@ export default function Fleet() {
     },
     {
       id: 2,
-      image: "/assets/fleet2.svg",
+      image: "/assets/fleet2.webp",
       name: "Atlantic Voyager",
       dwt: "98,500 MT",
       cargo: "Refined Petroleum Products",
@@ -18,7 +18,7 @@ export default function Fleet() {
     },
     {
       id: 3,
-      image: "/assets/fleet3.svg",
+      image: "/assets/fleet3.webp",
       name: "Sea Fortune",
       dwt: "74,200 MT",
       cargo: "Chemical & Liquid Bulk",
@@ -26,7 +26,7 @@ export default function Fleet() {
     },
     {
       id: 4,
-      image: "/assets/fleet4.svg",
+      image: "/assets/fleet4.webp",
       name: "Ocean Titan",
       dwt: "157,000 MT",
       cargo: "Crude & Heavy Fuel Oil",
@@ -60,7 +60,7 @@ export default function Fleet() {
             {/* Main Grayscale Worker Image */}
             <div className="w-full aspect-4/3 sm:aspect-16/10 rounded-2xl overflow-hidden shadow-sm">
               <img
-                src="/assets/worker.svg"
+                src="/assets/worker.webp"
                 alt="Maritime Worker"
                 className="w-full h-full object-cover grayscale"
               />
@@ -69,12 +69,12 @@ export default function Fleet() {
             {/* Top Right Floating Images */}
             <div className="absolute top-4 right-4 flex flex-col gap-3">
               <img
-                src="/assets/ship-1.svg"
+                src="/assets/ship-1.webp"
                 alt="Ship Deck"
                 className="w-24 h-16 sm:w-28 sm:h-20 object-cover rounded-xl border-3 border-[#F5F7FA] shadow-md"
               />
               <img
-                src="/assets/ship-2.svg"
+                src="/assets/ship-2.webp"
                 alt="Cargo Containers"
                 className="w-24 h-16 sm:w-28 sm:h-20 object-cover rounded-xl border-3 border-[#F5F7FA] shadow-md"
               />

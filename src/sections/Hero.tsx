@@ -8,9 +8,9 @@ export default function Hero() {
 
   return (
     <div
-      className="relative w-full min-h-screen font-display flex flex-col items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-black"
+      className="relative w-full min-h-screen font-display flex flex-col items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-[#020B14]"
       style={{
-        backgroundImage: "url('/assets/hero.svg')",
+        backgroundImage: "url('/assets/hero.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

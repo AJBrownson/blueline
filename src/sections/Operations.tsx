@@ -36,13 +36,14 @@ export default function Operations() {
 
   return (
     <section
-      className="relative w-full py-24 md:py-32 xl:py-35 bg-[#020B14] font-display overflow-hidden"
+      className="relative w-full -mt-10 xl:-mt-24 py-24 md:py-32 xl:py-35 font-display overflow-hidden bg-[#020B14]"
       style={{
-        backgroundImage: "url('/assets/operations-bg.svg')",
+        backgroundImage: "url('/assets/operations-bg.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
+
       {/* Deep dark teal/navy overlay to ensure text contrast over the image */}
       {/* <div className="absolute inset-0 bg-[#04121A]/85"></div> */}
 
