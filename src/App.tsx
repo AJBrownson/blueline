@@ -1,3 +1,4 @@
+import Contact from "./sections/Contact";
 import CTA from "./sections/CTA";
 import Fleet from "./sections/Fleet";
 import Hero from "./sections/Hero";
@@ -14,6 +15,7 @@ export default function App() {
       <Services />
       <Voyage />
       <CTA />
+      <Contact />
     </>
   );
 }
