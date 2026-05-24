@@ -42,6 +42,12 @@ export default function Voyage() {
             Focused on fuel efficiency, emissions optimization, and 
             responsible tanker operations.
           </p>
+
+          {/* images */}
+          <div className="flex items-center justify-center mt-10">
+            <img src="/assets/voyage-mobile.webp" alt="Maritime Professionals on site" className="lg:hidden w-full h-auto md:h-112.5 object-cover" />
+            <img src="/assets/voyage-web.webp" alt="Maritime Professionals on site" className="hidden lg:block w-full h-auto md:h-112.5 object-cover" />
+          </div>
         </div>
       </div>
     </section>
