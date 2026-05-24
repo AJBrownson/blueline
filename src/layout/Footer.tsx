@@ -2,14 +2,14 @@
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#1A64A3] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8 font-display">
+    <footer className="w-full bg-[#145DA0] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8 font-display">
       <div className="max-w-350 mx-auto">
         {/* Main Bordered Card Container */}
-        <div className="border border-white/20 rounded-2xl overflow-hidden mb-10">
+        <div className="border border-[#2B6DA9] rounded-2xl overflow-hidden mb-10">
           {/* Top Section: Links & Info Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 p-8 md:p-0 gap-y-10 md:gap-y-0">
             {/* Column 1: Contact */}
-            <div className="md:p-10 lg:p-12 md:border-r border-white/20">
+            <div className="md:p-10 lg:p-12 md:border-r border-[#2B6DA9]">
               <h3 className="text-sm md:text-xl text-[#A1BED9] font-semibold tracking-wide mb-6">
                 CONTACT
               </h3>
@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
 
             {/* Column 2: Services */}
-            <div className="md:p-10 lg:p-12 md:border-r border-white/20">
+            <div className="md:p-10 lg:p-12 md:border-r border-[#2B6DA9]">
               <h3 className="text-sm md:text-xl text-[#A1BED9] font-semibold tracking-wide mb-6">
                 SERVICES
               </h3>
@@ -92,7 +92,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#about-us"
-                    className="text-[14px] hover:text-white/70 transition-colors"
+                    className="text-xs md:text-base hover:text-white/70 transition-colors"
                   >
                     About Us
                   </a>
@@ -100,7 +100,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#careers"
-                    className="text-[14px] hover:text-white/70 transition-colors"
+                    className="text-xs md:text-base hover:text-white/70 transition-colors"
                   >
                     Careers
                   </a>
@@ -108,7 +108,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#news"
-                    className="text-[14px] hover:text-white/70 transition-colors"
+                    className="text-xs md:text-base hover:text-white/70 transition-colors"
                   >
                     News
                   </a>
@@ -116,7 +116,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#contact"
-                    className="text-[14px] hover:text-white/70 transition-colors"
+                    className="text-xs md:text-base hover:text-white/70 transition-colors"
                   >
                     Contact
                   </a>
@@ -126,7 +126,7 @@ export default function Footer() {
           </div>
 
           {/* Middle Section: Big Logo */}
-          <div className="border-t border-white/20 p-8 md:p-12 lg:p-16 flex justify-center items-center">
+          <div className="border-t border-[#2B6DA9] p-8 md:p-12 lg:p-16 flex justify-center items-center">
             <img
               src="/assets/footer-logo.webp"
               alt="BlueLine Ship Management Large Logo"
@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section: Copyright & Socials */}
-        <div className="pt-6 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-white/70">
+        <div className="pt-6 border-t border-[#2B6DA9] flex justify-between items-center gap-4 text-[10px] md:text-[15px] text-[#A1BED9]">
           <p>© 2026 BlueLine Ship. All rights reserved.</p>
 
           <div className="flex items-center space-x-6">
