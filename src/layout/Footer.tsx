@@ -139,7 +139,7 @@ export default function Footer() {
         <div className="pt-6 border-t border-[#2B6DA9] flex justify-between items-center gap-4 text-[10px] md:text-[15px] text-[#A1BED9]">
           <p>© 2026 BlueLine Ship. All rights reserved.</p>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-2 md:space-x-6">
             <a href="#linkedin" className="hover:text-white transition-colors">
               LinkedIn
             </a>
