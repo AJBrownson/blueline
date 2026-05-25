@@ -185,6 +185,9 @@ export default function Company() {
 
       <Voyagee />
       <Contact />
+
+      <Voyage />
+      <Contact />
     </>
   );
 }
