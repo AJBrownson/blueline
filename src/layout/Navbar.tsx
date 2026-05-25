@@ -15,6 +15,8 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  
+
   return (
     <nav className="w-full bg-[#F5F7FA] font-display relative z-50">
       {/* Desktop & Mobile Top Bar */}
