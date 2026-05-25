@@ -27,7 +27,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column: Glassmorphism Form Container */}
-          <div className="w-full lg:w-120 shrink-0">
+          <div className="w-full lg:w-120 xl:w-186 shrink-0">
             <div className="bg-[#0B1F33]/10 backdrop-blur-md border border-white/5 rounded-2xl px-4 md:px-6 py-3 md:py-5 shadow-2xl">
               <form
                 className="flex flex-col space-y-3"
