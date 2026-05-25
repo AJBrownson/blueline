@@ -1,4 +1,5 @@
-
+import Voyage from "./sections/Voyage"
+import Contact from "./sections/Contact"
 
 export default function Company() {
   return (
@@ -78,6 +79,9 @@ export default function Company() {
 
       </div>
     </section>
+
+      <Voyage />
+      <Contact />
     </>
   );
 }
