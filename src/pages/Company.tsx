@@ -179,14 +179,11 @@ export default function Company() {
           </div>
 
           {/* Full-width Bottom Divider Line (Visible on both Mobile & Desktop) */}
-          <div className="w-full max-w-[1000px] h-px bg-[#E2E8F0]" />
+          <div className="w-full max-w-250 h-px bg-[#E2E8F0]" />
         </div>
       </section>
 
       <Voyagee />
-      <Contact />
-
-      <Voyage />
       <Contact />
     </>
   );
