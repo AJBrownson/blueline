@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs md:text-sm text-[#A1BED9] mb-1">
-                    Local Address:
+                    Nigerian Address:
                   </p>
                   <p className="text-xs md:text-base leading-relaxed">
                     No. 5 Chief Manilla Pepple str, Bonny Island

@@ -87,7 +87,7 @@ export default function Hero() {
               <span
                 className={`text-[14px] ${selectedRadio === "container" ? "text-white" : "text-slate-300"}`}
               >
-                Container / Bill of Landing Number
+                Container / Bill of Lading
               </span>
             </label>
 

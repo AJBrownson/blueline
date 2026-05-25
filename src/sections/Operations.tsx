@@ -5,7 +5,7 @@ export default function Operations() {
       icon: (
         <img src="/assets/icons/boat.svg" alt="Ship Icon" className="w-8.5 h-8.5 text-slate-300 mb-5" />
       ),
-      value: "1M+",
+      value: "200M+",
       label: "Barrels Transported",
     },
     {
