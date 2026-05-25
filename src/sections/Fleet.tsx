@@ -35,7 +35,7 @@ export default function Fleet() {
   ];
 
   return (
-    <section className="w-full bg-[#FFFFFF] py-16 md:pt-35 md:pb-20 px-4 sm:px-6 lg:px-8 font-display">
+    <section className="w-full bg-[#FFFFFF] py-16 md:pt-35 md:pb-20 px-4 sm:px-6 lg:px-8 font-display" id="safety-&-quality">
       <div className="max-w-312.5 mx-auto">
         {/* Top Section: Split Layout */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-16">
@@ -103,7 +103,7 @@ export default function Fleet() {
         <hr className="border-t border-slate-200 mb-12" />
 
         {/* Bottom Section: Fleet Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-10">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-10" id="fleets">
           <p className="text-[13px] md:text-[14px] text-[#475569] leading-relaxed max-w-sm">
             Delivering reliable tanker operations across global maritime routes
             with efficiency, safety, and compliance at every level.

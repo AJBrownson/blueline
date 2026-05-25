@@ -9,6 +9,7 @@ export default function Contact() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      id="contact"
     >
 
       <div className="relative z-10 w-full max-w-362 mx-auto px-4 sm:px-6 lg:px-8">

@@ -42,6 +42,7 @@ export default function Operations() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      id="operations"
     >
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">

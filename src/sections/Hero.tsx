@@ -15,7 +15,6 @@ export default function Hero() {
         backgroundPosition: "center",
       }}
     >
-
       {/* Main Hero Content */}
       <div className="relative z-10 flex flex-col items-center text-center w-full max-w-4xl mt-12 sm:mt-16">
         <h1 className="w-full max-w-205.75 mx-auto text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6">
@@ -31,12 +30,18 @@ export default function Hero() {
 
         {/* Action Buttons */}
         <div className="flex gap-4 mb-16 sm:mb-24 w-full sm:w-auto">
-          <button className="bg-[#145DA0] text-white cursor-pointer px-6 py-3 rounded-md md:rounded-[10px] font-medium transition-colors shadow-lg w-full sm:w-auto text-[15px]">
+          <a
+            href="#contact"
+            className="bg-[#145DA0] text-white cursor-pointer px-6 py-3 rounded-md md:rounded-[10px] font-medium transition-colors shadow-lg w-full sm:w-auto text-[15px]"
+          >
             Contact Us
-          </button>
-          <button className="bg-white text-[#0F172A] cursor-pointer px-6 py-3 rounded-md md:rounded-[10px] font-medium transition-colors shadow-lg w-full sm:w-auto text-[15px]">
+          </a>
+          <a
+            href="#fleets"
+            className="bg-white text-[#0F172A] cursor-pointer px-6 py-3 rounded-md md:rounded-[10px] font-medium transition-colors shadow-lg w-full sm:w-auto text-[15px]"
+          >
             Explore Fleet
-          </button>
+          </a>
         </div>
 
         {/* Tracking Widget Card */}

@@ -71,9 +71,9 @@ export default function Navbar() {
             </div>
 
             {/* Contact Us Button */}
-            <button className="bg-[#145DA0] text-white text-sm font-medium px-4 py-3 cursor-pointer rounded-[10px] transition-colors shadow-sm">
+            <a href="#contact" className="bg-[#145DA0] text-white text-sm font-medium px-4 py-3 cursor-pointer rounded-[10px] transition-colors shadow-sm">
               Contact Us
-            </button>
+            </a>
           </div>
 
           {/* Mobile Hamburger Icon */}
@@ -148,7 +148,7 @@ export default function Navbar() {
             <div className="relative px-3">
               <div className="absolute inset-y-0 left-3 pl-3 flex items-center pointer-events-none">
                 <svg
-                  className="h-[18px] w-[18px] text-slate-400"
+                  className="h-4.5 w-4.5 text-slate-400"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -163,14 +163,14 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search"
-                className="w-full pl-10 pr-4 py-[8px] text-[14px] text-slate-700 bg-white border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#195E99]/20 focus:border-[#195E99]"
+                className="w-full pl-10 pr-4 py-2 text-[14px] text-slate-700 bg-white border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#195E99]/20 focus:border-[#195E99]"
               />
             </div>
 
             <div className="px-3">
-              <button className="w-full bg-[#1A619F] hover:bg-[#144D7E] text-white text-[15px] font-medium px-6 py-[10px] rounded-md transition-colors shadow-sm">
+              <a href="#contact" className="w-full bg-[#1A619F] hover:bg-[#144D7E] text-white text-[15px] font-medium px-6 py-2.5 rounded-md transition-colors shadow-sm">
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
         </div>
