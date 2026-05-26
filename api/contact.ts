@@ -30,15 +30,13 @@ export default async function handler(
       to: process.env.EMAIL_USER,
       replyTo: email,
       subject: `New Website Lead: ${fullName} from ${companyName || "N/A"}`,
-      text: `
-        Name: ${fullName}
-        Company: ${companyName || "Not provided"}
-        Email: ${email}
-        Phone: ${phone || "Not provided"}
-        
-        Message:
-        ${message}
-      `,
+text: `Name: ${fullName}
+Company: ${companyName || "Not provided"}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+
+Message:
+${message}`,
     });
 
     return res
