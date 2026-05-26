@@ -17,10 +17,10 @@ export default function Footer() {
                 <div>
                   <p className="text-xs md:text-sm text-[#A1BED9] mb-1">Email:</p>
                   <a
-                    href="mailto:bluelineshipmgt@gmail.com"
+                    href="mailto:info@bluelineshipmgt.com"
                     className="text-xs md:text-base hover:underline"
                   >
-                    bluelineshipmgt@gmail.com
+                    info@bluelineshipmgt.com
                   </a>
                 </div>
                 <div>

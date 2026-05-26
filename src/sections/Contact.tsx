@@ -1,6 +1,46 @@
-
+import { useState } from "react";
 
 export default function Contact() {
+  const [status, setStatus] = useState("Send Message");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus("Sending...");
+
+    // 1. Capture the form element explicitly
+    const formElement = e.currentTarget;
+
+    const formData = new FormData(formElement);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("Message Sent!");
+        // 2. Safely call reset() on the explicitly captured form element
+        formElement.reset();
+      } else {
+        setStatus("Failed to send");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("Error occurred");
+    } finally {
+      setIsSubmitting(false);
+      // Reset button text after 3 seconds
+      setTimeout(() => setStatus("Send Message"), 3000);
+    }
+  };
+
   return (
     <section
       className="relative w-full -mt-16 py-20 md:py-32 flex items-center justify-center overflow-hidden bg-slate-900 font-display"
@@ -11,7 +51,6 @@ export default function Contact() {
       }}
       id="contact"
     >
-
       <div className="relative z-10 w-full max-w-362 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center lg:items-start justify-between">
           {/* Left Column: Typography */}
@@ -29,10 +68,7 @@ export default function Contact() {
           {/* Right Column: Glassmorphism Form Container */}
           <div className="w-full lg:w-120 xl:w-186 shrink-0">
             <div className="bg-[#0B1F33]/10 backdrop-blur-md border border-white/5 rounded-2xl px-4 md:px-6 py-3 md:py-5 shadow-2xl">
-              <form
-                className="flex flex-col space-y-3"
-                onSubmit={(e) => e.preventDefault()}
-              >
+              <form className="flex flex-col space-y-3" onSubmit={handleSubmit}>
                 {/* Full Name */}
                 <div>
                   <label
@@ -44,6 +80,7 @@ export default function Contact() {
                   <input
                     type="text"
                     id="fullName"
+                    name="fullName"
                     placeholder="Enter your full name"
                     className="w-full bg-[#C7D6E4] border border-[#A3B7CB] text-[#0F172A] placeholder:text-[#64748B] px-4 py-2.5 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#3A81C9] text-xs md:text-sm font-medium transition-all"
                   />
@@ -60,6 +97,7 @@ export default function Contact() {
                   <input
                     type="text"
                     id="companyName"
+                    name="companyName"
                     placeholder="Enter company name"
                     className="w-full bg-[#C7D6E4] border border-[#A3B7CB] text-[#0F172A] placeholder:text-[#64748B] px-4 py-2.5 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#3A81C9] text-xs md:text-sm font-medium transition-all"
                   />
@@ -76,6 +114,7 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Enter your email address"
                     className="w-full bg-[#C7D6E4] border border-[#A3B7CB] text-[#0F172A] placeholder:text-[#64748B] px-4 py-2.5 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#3A81C9] text-xs md:text-sm font-medium transition-all"
                   />
@@ -92,6 +131,7 @@ export default function Contact() {
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
                     placeholder="Enter phone number"
                     className="w-full bg-[#C7D6E4] border border-[#A3B7CB] text-[#0F172A] placeholder:text-[#64748B] px-4 py-2.5 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#3A81C9] text-xs md:text-sm font-medium transition-all"
                   />
@@ -107,6 +147,7 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
                     placeholder="Tell us about your request or operation needs"
                     className="w-full bg-[#C7D6E4] border border-[#A3B7CB] text-[#0F172A] placeholder:text-[#64748B] px-4 py-2.5 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#3A81C9] text-xs md:text-sm font-medium transition-all resize-none"
@@ -117,9 +158,10 @@ export default function Contact() {
                 <div className="-mt-2">
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="cursor-pointer w-full bg-[#3A84C7] hover:bg-[#2F6BA8] text-white text-xs md:text-base font-normal py-2.5 rounded-[10px] transition-colors shadow-sm"
                   >
-                    Send Message
+                    {status}
                   </button>
                 </div>
               </form>
