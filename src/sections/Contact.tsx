@@ -6,14 +6,16 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setIsSubmitting(true);
     setStatus("Sending...");
 
-    // 1. Capture the form element explicitly
     const formElement = e.currentTarget;
 
     const formData = new FormData(formElement);
     const data = Object.fromEntries(formData.entries());
+
+    console.log(data);
 
     try {
       const response = await fetch("/api/contact", {
@@ -24,9 +26,10 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
+      console.log(response);
+
       if (response.ok) {
         setStatus("Message Sent!");
-        // 2. Safely call reset() on the explicitly captured form element
         formElement.reset();
       } else {
         setStatus("Failed to send");
@@ -36,8 +39,10 @@ export default function Contact() {
       setStatus("Error occurred");
     } finally {
       setIsSubmitting(false);
-      // Reset button text after 3 seconds
-      setTimeout(() => setStatus("Send Message"), 3000);
+
+      setTimeout(() => {
+        setStatus("Send Message");
+      }, 3000);
     }
   };
 

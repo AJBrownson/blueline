@@ -1,6 +1,10 @@
 import nodemailer from "nodemailer";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: VercelRequest,
+  res: VercelResponse
+) {
   // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method Not Allowed" });
@@ -14,17 +18,17 @@ export default async function handler(req, res) {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.EMAIL_USER, // Your Hostinger email address
-      pass: process.env.EMAIL_PASS, // Your Hostinger email password
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   try {
     // Send the email
     await transporter.sendMail({
-      from: process.env.EMAIL_USER, // Must be sent from your authenticated Hostinger email
-      to: process.env.EMAIL_USER, // You are sending this to yourself to read
-      replyTo: email, // If you hit "reply" in your inbox, it goes to the customer
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `New Website Lead: ${fullName} from ${companyName || "N/A"}`,
       text: `
         Name: ${fullName}
